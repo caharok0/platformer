@@ -4,16 +4,21 @@ pygame.init()
 
 W, H = 1280, 700
 FPS = 20
+coins_count = 0
+is_key = False
 
 window = pygame.display.set_mode((W, H))
 pygame.display.set_caption("Platformer")
 pygame.display.set_icon(pygame.image.load("assets/images/player/stand_1.png"))
 
 clock = pygame.time.Clock()
+'''ГРУПИ СПРАЙТІВ'''
+platforms = pygame.sprite.Group()
+coins = pygame.sprite.Group()
+'''КАРТИНКИ СПРАЙТІВ'''
+bg = pygame.transform.scale(pygame.image.load("assets/background/CB (1).jpg"), (W, H))
 
-bg = pygame.transform.scale(pygame.image.load("assets/background/level1.png"), (W, H))
-
-platform_image = pygame.image.load("assets/background/platform.png")
+platform_image = pygame.image.load("assets/background/chess-pattern-8061034_1280.jpg")
 
 player_images = [
     pygame.image.load("assets/images/player/stand_1.png"),
@@ -33,3 +38,15 @@ player_images = [
     pygame.image.load("assets/images/player/move_left_5.png"),
     pygame.image.load("assets/images/player/move_left_6.png"),
 ]
+
+coin_image = pygame.image.load("assets/images/coin/coin-removebg-preview.png")
+dungeon_image = pygame.image.load("assets/images/dungeon/dungeon (1).png")
+key_image = pygame.image.load("assets/images/key/key.png")
+portal_image = pygame.image.load("assets/images/portal/portal.png")
+
+
+
+
+'''ШРИФТИ'''
+pygame.font.init()
+font1 = pygame.font.Font(None, 50)
