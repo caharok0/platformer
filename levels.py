@@ -12,8 +12,8 @@ level1 = [
     "                                              --     --         ",
     "       --           --                     --     0             ",
     "         -   --                -   -   --        --      -      ",
-    "-     --   o      o    o     1             o       o            ",
-    "-    o     --    -    ---   ---          --      ---  o         ",
+    "-     --   o      o    o                   o       o            ",
+    "-  1 o     --    -    ---   ---          --      ---   o        ",
     "-------           --               --                --         ",
 ]
 
@@ -70,6 +70,7 @@ def draw_level(level: list):
             if symbol == "0":
                 dungeon = MapObject(x, y, 80, 50,  dungeon_image)
                 level_objects.add(dungeon)
+
 
             x += 100
         x = 0

@@ -50,3 +50,9 @@ portal_image = pygame.image.load("assets/images/portal/portal.png")
 '''ШРИФТИ'''
 pygame.font.init()
 font1 = pygame.font.Font(None, 50)
+font2 = pygame.font.Font(None, 60)
+
+'''ТЕКСТИ'''
+find_key_txt = font2.render("Знайти ключ", True, (255, 155, 255))
+open_dungeon_txt = font2.render("натисни e щоб відкрити", True, (255, 155, 255))
+get_key_txt = font2.render("натисни e щоб підібрати", True, (255, 155, 255))
